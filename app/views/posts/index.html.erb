@@ -1,6 +1,6 @@
 <h1>Posts#index</h1>
 
-<table>
+<table class="table">
   <tr>
     <th>Autor</th>
     <th>Descripción</th>
@@ -16,7 +16,7 @@
 
       <td><%= link_to "Ver", post %></td>
       <td><%= link_to "Editar", edit_post_path(post) %></td>
-      <td><%= link_to "Eliminar", post, action: :delete, data: { confirm: 'Estás seguro?' } %></td>
+      <td><%= link_to "Eliminar", post, method: :delete, data: { confirm: 'Estás seguro?' } %></td>
     </tr>
   <% end %>
 

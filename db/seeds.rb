@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Post.delete_all
 10.times do
   Post.create!(titulo: "Había una vez un barco chiquito",
               descripcion: "Érase una vez en lala, un barco chiquito quiso asesinar a un ciudadano.",
