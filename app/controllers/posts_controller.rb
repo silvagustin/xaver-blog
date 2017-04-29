@@ -8,6 +8,8 @@ class PostsController < ApplicationController
   skip_authorize_resource :only => :show
 
   def show
+    @post_anterior = @post.anterior
+    @post_siguiente = @post.siguiente
   end
 
   def index
@@ -58,4 +60,12 @@ class PostsController < ApplicationController
     #def get_post
     #  @post = Post.find(params[:id])
     #end
+
+    def anterior
+      
+    end
+
+    def siguiente
+      
+    end
 end

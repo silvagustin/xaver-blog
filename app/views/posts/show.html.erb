@@ -18,5 +18,5 @@
 	<%= @post.contenido %>
 </p>
 
-<%= link_to "Anterior",  %>
-<%= link_to "Siguiente",  %>
+<%= link_to "Anterior", @post_anterior unless @post_anterior.blank? %>
+<%= link_to "Siguiente", @post_siguiente unless @post_siguiente.blank? %>
