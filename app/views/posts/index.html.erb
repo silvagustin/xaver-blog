@@ -10,13 +10,16 @@
 
   <% @posts.each do |post| %>
     <tr>
-      <td><%#= post.autor %></td>
+      <td><%= post.usuario.email %></td>
       <td><%= post.descripcion %></td>
       <td><%= post.created_at %></td>
 
       <td><%= link_to "Ver", post %></td>
-      <td><%= link_to "Editar", edit_post_path(post) %></td>
-      <td><%= link_to "Eliminar", post, method: :delete, data: { confirm: 'Estás seguro?' } %></td>
+
+      <% if can? :crud, post %>
+        <td><%= link_to "Editar", edit_post_path(post) %></td>
+        <td><%= link_to "Eliminar", post, method: :delete, data: { confirm: 'Estás seguro?' } %></td>
+      <% end %>
     </tr>
   <% end %>
 

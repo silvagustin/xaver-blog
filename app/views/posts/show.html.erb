@@ -1,4 +1,9 @@
 <p>
+  <strong>Autor:</strong>
+  <%= @post.usuario.email %>
+</p>
+
+<p>
   <strong>Title:</strong>
   <%= @post.titulo %>
 </p>
@@ -12,3 +17,6 @@
 	<strong>Contenido:</strong>
 	<%= @post.contenido %>
 </p>
+
+<%= link_to "Anterior",  %>
+<%= link_to "Siguiente",  %>

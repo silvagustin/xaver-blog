@@ -10,6 +10,16 @@
   </head>
 
   <body>
+  	<% if usuario_signed_in? %>
+  		<%= link_to	"Logout", destroy_usuario_session_path, method: :delete %>
+      <%= link_to "Crear Post", new_post_path %>
+  	<% else %>
+  		<%= link_to "Iniciar sesion", new_usuario_session_path %>
+  		<%= link_to "Crear cuenta", new_usuario_registration_path %>
+  	<% end %>
+
+  	<%= link_to "Index", root_path %>
+
     <%= yield %>
   </body>
 </html>

@@ -55,3 +55,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'twitter-bootstrap-rails', '~> 4.0'
 gem 'simple_form'
 gem 'devise'
+gem 'hirb'
+gem 'cancancan', '~> 1.15'
